@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Políticas de Privacidad - Mis Aplicaciones</title>
+    <!-- Fuente Google Fonts (Inter) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0d1117;
+            --card-bg: #161b22;
+            --border-color: #30363d;
+            --border-glow: #8b5cf6;
+            --text-main: #f0f6fc;
+            --text-muted: #8b949e;
+            --accent-gradient: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+            --accent-hover: #7c3aed;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 40px 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 800px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            background: linear-gradient(to right, #60a5fa, #c084fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        header p {
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+
+        .policies-grid {
+            display: grid;
+            gap: 20px;
+        }
+
+        .policy-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 20px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: var(--text-main);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        .policy-card:hover {
+            border-color: var(--border-glow);
+            transform: translateY(-2px);
+            box-shadow: 0 0 15px rgba(139, 92, 246, 0.3);
+        }
+
+        .policy-info h2 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .policy-info span {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            font-family: monospace;
+        }
+
+        .btn-view {
+            background: var(--accent-gradient);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: opacity 0.2s;
+        }
+
+        .policy-card:hover .btn-view {
+            opacity: 0.9;
+        }
+
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Políticas de Privacidad</h1>
+            <p>Selecciona una aplicación para ver su documentación legal y de privacidad.</p>
+        </header>
+
+        <main class="policies-grid">
+            <!-- Política 1 -->
+            <a href="./politics/politica-privacidad-autoflow.html" class="policy-card">
+                <div class="policy-info">
+                    <h2>Politicas de privacidad Auto Flow</h2>
+                    <span>politics/app-1.html</span>
+                </div>
+                <button class="btn-view">Ver Política</button>
+            </a>
+
+            <!-- Política 2 -->
+            <a href="./politics/app-2.html" class="policy-card">
+                <div class="policy-info">
+                    <h2>Aplicación 2 (Ejemplo)</h2>
+                    <span>politics/app-2.html</span>
+                </div>
+                <button class="btn-view">Ver Política</button>
+            </a>
+
+            <!-- Política 3 -->
+            <a href="./politics/app-3.html" class="policy-card">
+                <div class="policy-info">
+                    <h2>Aplicación 3 (Ejemplo)</h2>
+                    <span>politics/app-3.html</span>
+                </div>
+                <button class="btn-view">Ver Política</button>
+            </a>
+        </main>
+
+        <footer>
+            &copy; 2026 - Todos los derechos reservados.
+        </footer>
+    </div>
+
+</body>
+</html>
